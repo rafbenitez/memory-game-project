@@ -1,0 +1,357 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Century Gothic';
+    font-size: 12px;
+    color: #242424;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+}
+
+header,
+nav,
+footer,
+section,
+article,
+div {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.h0 {
+    display: block;
+    font-size: 6vw;
+    margin: 0;
+    font-weight: bold;
+}
+
+/*
+ *
+ * Flex Grid
+ *
+ */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*
+ *
+ * Header
+ *
+ */
+
+.header {
+    padding: 4px;
+    transition: min-height 0.3s;
+    text-align: center;
+    background-color: #ffed39;
+}
+
+/*
+ *
+ * Main
+ *
+ */
+
+main {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    padding: 5px;
+    border-radius: 8px;
+    color: #fefefe;
+    background-color: #3a486f;
+}
+
+.button:hover,
+.button:active {
+    background-color: #130845;
+    cursor: pointer;
+}
+
+.button-group {
+    border-radius: 0px;
+}
+
+.button-group:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.button-group:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.button-pressed {
+    color: #3a486f;
+    background-color: #fefefe;
+    border: 1px;
+    border-style: solid;
+}
+
+.button-pressed:hover {
+    background-color: #fefefe;
+    cursor: default;
+}
+
+li span.tooltip::before {
+    content: attr(data-tip) ;
+    font-size: 10px;
+    position:absolute;
+    z-index: 999;
+    white-space:nowrap;
+    bottom:9999px;
+    left: 50%;
+    background:#000;
+    color:#e0e0e0;
+    padding:0px 7px;
+    line-height: 24px;
+    height: 24px;
+    opacity: 0;
+    transition:opacity 0.4s ease-out;
+}
+
+li span.tooltip:hover::before {
+    opacity: 1;
+    bottom:-35px;
+}
+
+/*
+ *
+ * Content
+ *
+ */
+
+.hero {
+    position: relative;
+    background-image: url("../img/software-engineering-768w.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 25vw;
+    max-height: 192px;
+    margin: 16px 0;
+}
+
+/*
+ *
+ * Game Dashboard
+ *
+ */
+
+.dashboard {
+    justify-content: center;
+    font-size: 3.5vw;
+    width: 100%;
+}
+
+.dashboard-widget  {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 8px;
+}
+
+.bright-star {
+    color: #faa60a;
+}
+
+.dim-star {
+    color: #000000;
+}
+
+.game-board {
+    width: 80vw;
+    height: 80vw;
+    max-width: 80vh;
+    max-height: 80vh;
+    border-radius: 8px;
+    background-color: #3a486f;
+    justify-content: space-evenly;
+    align-content: space-around;
+    align-items: center;
+}
+
+.card {
+    width: 22%;
+    height: 22%;
+    border-radius: 8px;
+    font-size: 1vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.clickable-card:hover,
+.clickable-card:active {
+    background-color: #130845;
+    cursor: pointer;
+}
+
+.face-down {
+    background-color: #242424;
+    -webkit-transition: background-color 0.5s linear 0s;
+    transition: background-color 0.5s linear 0s;
+}
+
+.face-down span {
+    opacity: 0;
+    color: #000000;
+    font-size: 3em;
+    -webkit-transition: opacity 1s linear 0s, font-size 1s linear 0s;
+    transition: opacity 1s linear 0s, font-size 1s linear 0s;
+}
+
+.face-up {
+    background-color: #ffed39;
+    -webkit-transition: background-color 0.25s linear 0s;
+    transition: background-color 0.25s linear 0s;
+}
+
+.face-up span {
+    opacity: 1;
+    color: #000000;
+    font-size: 12em;
+    -webkit-transition: font-size 0.25s linear 0s;
+    transition: font-size 0.25s linear 0s;
+}
+
+.guess {
+    background-color: #faa60a;
+    -webkit-transition: background-color 0.25s linear 0s;
+    transition: background-color 0.25s linear 0s;
+}
+
+.guess span {
+    opacity: 1;
+    color: #000000;
+    font-size: 10em;
+    -webkit-transition: font-size 0.25s linear 0s;
+    transition: font-size 0.25s linear 0s;
+}
+
+.incorrect-guess {
+    background-color: #ab5dee;
+}
+
+.incorrect-guess span {
+    color: #000000;
+    font-size: 10em;
+}
+
+/*
+ *
+ * Modal
+ *
+ */
+
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    font-size: 10px;
+    width: 60%;
+    border-radius: 8px;
+    margin: 20vh auto;
+    background-color: #fefefe;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.modal-header {
+    border-radius: 8px 8px 0 0;
+}
+
+.modal-body {
+    padding: 10px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-check {
+    color: #1da11f;
+    font-size: 24px;
+}
+
+.modal-results {
+    padding: 10px;
+    margin: 10px;
+    font-size: 14px;
+    text-align: center;
+    align-items: center;
+}
+
+.results-widget  {
+    padding: 4px;
+}
+
+.modal-footer {
+    padding: 10px;
+}
+
+.play-again {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.show-modal {
+    display: block;
+}
+
+/*
+ *
+ * Footer
+ *
+ */
+
+footer {
+    padding: 10px;
+}
+
+.footer-link {
+    margin: 0;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #333;
+    padding: 6px;
+}

@@ -1,0 +1,29 @@
+/* Default styling up to Nexus 5 - 360px*/
+
+/* Styling beyond Nexus 5 */
+@media screen and (min-width: 520px) {
+	.dashboard {
+		font-size: 18px;
+	}
+}
+
+/* Maximum content width - 900px*/
+@media screen and (min-width: 800px) {
+	body,
+	main,
+	header,
+	footer,
+	.nav {
+		width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.h0 {
+		font-size: 48px;
+	}
+
+	.card {
+		font-size: 8px;
+	  }
+}
