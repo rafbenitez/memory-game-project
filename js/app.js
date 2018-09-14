@@ -79,7 +79,7 @@ function changeDeck(event) {
     }
 }
 
-// Shuffle function from Stack Overflow https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array/2450976#2450976
+// Fisher-Yates (aka Knuth) Shuffle function from Stack Overflow https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array/2450976#2450976
 function shuffle(array) {
     let currentIndex = array.length, temporaryValue, randomIndex;
 
